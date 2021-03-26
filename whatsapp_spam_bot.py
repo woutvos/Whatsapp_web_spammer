@@ -5,12 +5,12 @@ import time
 
 # Define some stuff
 browser  = webdriver.Chrome(ChromeDriverManager().install())
-platform = input("What platform do you want to use? Instagram or WhatsApp, it's case sensitive. ")
+platform = input("What platform do you want to use? Instagram or WhatsApp: ").lower()
 
 # Choose to use Instagram or WhatsApp
 
 # WhatsApp
-if platform == "WhatsApp":
+if platform == "whatsapp":
 
     # Start the browser and go to the site
     browser.get('https://web.whatsapp.com')
@@ -44,7 +44,7 @@ if platform == "WhatsApp":
         send("instagram")
 
 # Instagram
-elif platform == "Instagram":
+elif platform == "instagram":
 
     # Open instagram
     browser.get("https://www.instagram.com/direct/t/340282366841710300949128178718937873934")
